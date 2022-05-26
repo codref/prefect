@@ -21,7 +21,7 @@ RUN apt-get update && \
 RUN npm install -g npm@8
 
 # Install dependencies separately so they cache
-COPY ./orion-ui/package*.json .
+COPY ./orion-ui/package*.json ./
 COPY ./orion-ui/packages ./packages
 RUN npm ci install 
 
